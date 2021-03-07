@@ -4,9 +4,6 @@
 # # Instructions
 # Enter the number of time blocks and partcipant names below. Newer NAMers first and long-timer NAMers last.
 
-# In[22]:
-
-
 NUM_BLOCKS = 4
 NAMES = """
 name 1
@@ -33,10 +30,6 @@ ROOM_URLS = [
 num_rooms = int(len(NAMES) / 2)
 assert len(ROOM_URLS) >= num_rooms, "Need at least {} rooms URLs but was only given {}.".format(num_rooms, len(ROOM_URLS))
 
-
-# In[30]:
-
-
 # Generate room assignments.
 def compute_room(id, block):
     if id == 2 * num_rooms:
@@ -52,10 +45,6 @@ block_to_id_to_room = [
     [compute_room(id, block) for id in range(len(NAMES))]
     for block in range(NUM_BLOCKS)
 ]
-
-
-# In[36]:
-
 
 # Print CSV.
 columns = ["Name"]
